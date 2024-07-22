@@ -19,9 +19,9 @@ being worked on (hopefully to be finished soon).
 
 ## Sync status
 
-| [Main addon](https://github.com/dog-on-moon/godot-intervals) SHA | Backport-4.2 SHA |
-|----------|----------|
-| 7054823c | 12efa8a5 |
+| [Main addon](https://github.com/dog-on-moon/godot-intervals) SHA | Backport-4.2 SHA | Backport Godot Version |
+|----------|----------|----------|
+| 7054823c | 12efa8a5 | v4.2.2.stable.official [15073afe3]
 
 # Godot Intervals
 
