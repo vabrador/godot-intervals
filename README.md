@@ -1,5 +1,28 @@
 ![screen-shot](https://github.com/fauxhaus/godot-intervals/blob/main/readme/banner.png)
 
+# Backport to 4.2
+
+
+This fork of [Godot Intervals](https://github.com/dog-on-moon/godot-intervals) adds a `backport-4.2` folder that
+contains another Godot project, built and maintained in Godot 4.2. The inner 4.2 project contains demo scenes
+rebuilt from the originals for Godot 4.2.
+
+The `addons` folder in the top-level 4.3 project is identical to the `addons` folder in the inner 4.2 project.
+This project's backported version of the addons should work in Godot 4.2 as well as Godot 4.3, which is
+useful if you are upgrading your project between Godot versions.
+
+If you update your project to Godot 4.3, I would strongly suggest switching back to the
+[main repository version](https://github.com/dog-on-moon/godot-intervals), but please note:
+- ⚠️Serialization compatibitility⚠️ between this fork and the main addon **HAS NOT YET BEEN TESTED** and is still
+being worked on (hopefully to be finished soon).
+    - They are likely to be very compatible, if not fully compatible, but this is not yet tested.
+
+## Sync status
+
+| [Main addon](https://github.com/dog-on-moon/godot-intervals) SHA | Backport-4.2 SHA |
+|----------|----------|
+| 7054823c | 12efa8a5 |
+
 # Godot Intervals
 
 Intervals is a lightweight animation plugin for Godot 4.3 designed to supplement both Tweens and AnimationPlayer by providing powerful, dynamic alternatives.
