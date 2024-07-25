@@ -4,18 +4,27 @@ extends Event
 class_name MultiEvent
 ## A MultiEvent contains multiple events and can be used for advanced, dynamic cutscenes.
 
-# 4.2 backport note: @export instead of @export_storage for editor_data,
-# cycles, debug.
+# 4.2 backport: @export_storage does not exist, _validate_property instead.
+# Removes @export* entirely, props are manually marked PROPERTY_USAGE_STORAGE.
 
-# BACKPORT_TODO: Implement _validate_property to make these hidden if possible.
 ## The editor data for this MultiEvent.
-@export var editor_data: Resource = null
+var editor_data: Resource = null
+#@export_storage var editor_data: Resource = null
 
 ## When true, cycles are allowed in the Multievent.
-@export var cycles := false
+var cycles := false
+#@export_storage var cycles := false
 
 ## When true, all started events will log their properties to the terminal.
-@export var debug := false
+var debug := false
+#@export_storage var debug := false
+
+# 4.2 backport: Mark editor_data, cycles, debug for serialization without
+# @export, to recreate the functionality of @export_storage.
+func _validate_property(p: Dictionary):
+	var export_storage_props = [ "editor_data", "cycles", "debug" ]
+	if p.name in export_storage_props && not (p.usage & PROPERTY_USAGE_STORAGE):
+		p.usage += PROPERTY_USAGE_STORAGE
 
 ## Whether or not we have completed this MultiEvent.
 var completed := false

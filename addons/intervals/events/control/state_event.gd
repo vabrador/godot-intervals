@@ -22,10 +22,18 @@ func _get_interval(_owner: Node, _state: Dictionary) -> Interval:
 			1:
 				_state.erase(key)
 			2:
-				_state.get_or_add(key, 0) # BACKPORT_TODO
+				# 4.2 backport: get_or_add() doesn't yet exist
+				#_state.get_or_add(key, 0)
+				_backport_get_or_add(_state, key, 0)
 				_state[key] += value
 		done.emit()
 	)
+
+## 4.2 backport: Godot 4.3's dict.get_or_add() for Godot 4.2.
+static func _backport_get_or_add(dict: Dictionary, key: Variant, else_add: Variant) -> Variant:
+	if !(key in dict):
+		dict[key] = else_add
+	return dict[key]
 
 #region Base Editor Overrides
 ## The category that the event will belong to.

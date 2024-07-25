@@ -3,8 +3,6 @@ extends Interval
 class_name SetProperty
 ## An Interval property setter, instantly setting an object's property.
 
-# BACKPORT_TODO: copied-over new file
-
 var object: Object
 var property: StringName
 var value: Variant
