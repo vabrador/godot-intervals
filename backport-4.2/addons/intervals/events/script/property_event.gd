@@ -16,6 +16,7 @@ class_name PropertyEvent
 		if _node_button and is_instance_valid(_node_button):
 			_node_button.visible = _object_exists()
 
+# 4.2 backport: @export_storage doesn't exist in 4.2, but _validate_property
 # handles marking it for serialization, so no annotation is needed.
 #@export_storage var value: Variant
 var value: Variant

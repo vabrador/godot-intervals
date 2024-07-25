@@ -15,11 +15,12 @@ class_name RouterSignalMulti
 # 4.2 backport: @export instead of @export_storage, and untype the Arrays
 # TODO: Can recreate export_storage by using _validate_property or
 # _get_property_list I think?
-#@export_storage var node_paths: Array[NodePath] = []
-@export var node_paths: Array[NodePath] = []
-#@export_storage var signal_names: Array[StringName] = []
-@export var signal_names: Array[StringName] = []
+#@export_storage var node_paths: Array[NodePath] = [^"", ^""]
+@export var node_paths: Array[NodePath] = [^"", ^""]
+#@export_storage var signal_names: Array[StringName] = [&"", &""]
+@export var signal_names: Array[StringName] = [&"", &""]
 
+# 4.2 backport: Ensure storage arrays are initialized before access.
 var _initialized_signal_count := false
 
 var _editor_owner: Node
