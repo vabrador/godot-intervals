@@ -42,7 +42,7 @@ resource_name = "Color Background"
 script = ExtResource("3_d3imt")
 node_path = NodePath("Background")
 property = "self_modulate"
-value = null
+value = Color(0.788235, 0.666667, 0.443137, 1)
 duration = 3.0
 ease = 2
 trans = 0
@@ -68,7 +68,7 @@ resource_name = "Color Background"
 script = ExtResource("3_d3imt")
 node_path = NodePath("Background")
 property = "self_modulate"
-value = null
+value = Color(0, 0, 0, 1)
 duration = 1.5
 ease = 2
 trans = 0
@@ -87,7 +87,7 @@ resource_name = "Color Background"
 script = ExtResource("3_d3imt")
 node_path = NodePath("Background")
 property = "self_modulate"
-value = null
+value = Color(0.423529, 0.192157, 0.490196, 1)
 duration = 1.5
 ease = 2
 trans = 0
@@ -106,7 +106,7 @@ resource_name = "Color Background"
 script = ExtResource("3_d3imt")
 node_path = NodePath("Background")
 property = "self_modulate"
-value = null
+value = Color(0, 0, 0, 1)
 duration = 1.5
 ease = 2
 trans = 0
@@ -128,24 +128,24 @@ script = ExtResource("3_1e3kg")
 resources = [SubResource("Resource_tvy7q"), SubResource("Resource_rqp5m"), SubResource("Resource_gde6u"), SubResource("Resource_1j5vg"), SubResource("Resource_f2csd"), SubResource("Resource_2781i"), SubResource("Resource_ypwto"), SubResource("Resource_s2nlb"), SubResource("Resource_hnygf"), SubResource("Resource_m08nt"), SubResource("Resource_rjeae"), SubResource("Resource_2lhns"), SubResource("Resource_gsl63"), SubResource("Resource_mhbdl"), SubResource("Resource_evll2"), SubResource("Resource_wa71l"), SubResource("Resource_22fj0"), SubResource("Resource_1d7v4")]
 connections = [[SubResource("Resource_rqp5m"), 0, SubResource("Resource_gde6u"), 0], [SubResource("Resource_1j5vg"), 0, SubResource("Resource_f2csd"), 0], [SubResource("Resource_f2csd"), 0, SubResource("Resource_2781i"), 0], [SubResource("Resource_f2csd"), 0, SubResource("Resource_ypwto"), 0], [SubResource("Resource_ypwto"), 0, SubResource("Resource_s2nlb"), 0], [SubResource("Resource_s2nlb"), 0, SubResource("Resource_hnygf"), 0], [SubResource("Resource_hnygf"), 0, SubResource("Resource_m08nt"), 0], [SubResource("Resource_hnygf"), 0, SubResource("Resource_rjeae"), 0], [SubResource("Resource_rjeae"), 0, SubResource("Resource_2lhns"), 0], [SubResource("Resource_2lhns"), 0, SubResource("Resource_tvy7q"), 0], [SubResource("Resource_2lhns"), 0, SubResource("Resource_rqp5m"), 0], [SubResource("Resource_gde6u"), 0, SubResource("Resource_gsl63"), 0], [SubResource("Resource_gsl63"), 0, SubResource("Resource_mhbdl"), 0], [SubResource("Resource_gsl63"), 0, SubResource("Resource_evll2"), 0], [SubResource("Resource_evll2"), 0, SubResource("Resource_wa71l"), 0], [SubResource("Resource_wa71l"), 0, SubResource("Resource_22fj0"), 0], [SubResource("Resource_wa71l"), 0, SubResource("Resource_1d7v4"), 0]]
 positions = {
-SubResource("Resource_1d7v4"): Vector2(-92.9816, -186.592),
-SubResource("Resource_22fj0"): Vector2(-92.9816, -306.592),
-SubResource("Resource_wa71l"): Vector2(-432.982, -306.592),
-SubResource("Resource_evll2"): Vector2(-732.982, -306.592),
-SubResource("Resource_mhbdl"): Vector2(-732.982, -406.592),
-SubResource("Resource_gsl63"): Vector2(-1192.98, -406.592),
-SubResource("Resource_2lhns"): Vector2(-2472.98, -546.592),
-SubResource("Resource_rjeae"): Vector2(-2912.98, -546.592),
-SubResource("Resource_m08nt"): Vector2(-2912.98, -726.592),
-SubResource("Resource_hnygf"): Vector2(-3312.98, -726.592),
-SubResource("Resource_s2nlb"): Vector2(-3652.98, -726.592),
-SubResource("Resource_ypwto"): Vector2(-4052.98, -726.592),
-SubResource("Resource_2781i"): Vector2(-4052.98, -906.592),
-SubResource("Resource_f2csd"): Vector2(-4592.98, -906.592),
-SubResource("Resource_1j5vg"): Vector2(-4932.98, -906.592),
-SubResource("Resource_gde6u"): Vector2(-1712.98, -406.592),
+SubResource("Resource_tvy7q"): Vector2(-2012.98, -546.592),
 SubResource("Resource_rqp5m"): Vector2(-2012.98, -406.592),
-SubResource("Resource_tvy7q"): Vector2(-2012.98, -546.592)
+SubResource("Resource_gde6u"): Vector2(-1712.98, -406.592),
+SubResource("Resource_1j5vg"): Vector2(-4932.98, -906.592),
+SubResource("Resource_f2csd"): Vector2(-4592.98, -906.592),
+SubResource("Resource_2781i"): Vector2(-4052.98, -906.592),
+SubResource("Resource_ypwto"): Vector2(-4052.98, -726.592),
+SubResource("Resource_s2nlb"): Vector2(-3652.98, -726.592),
+SubResource("Resource_hnygf"): Vector2(-3312.98, -726.592),
+SubResource("Resource_m08nt"): Vector2(-2912.98, -726.592),
+SubResource("Resource_rjeae"): Vector2(-2912.98, -546.592),
+SubResource("Resource_2lhns"): Vector2(-2472.98, -546.592),
+SubResource("Resource_gsl63"): Vector2(-1192.98, -406.592),
+SubResource("Resource_mhbdl"): Vector2(-732.982, -406.592),
+SubResource("Resource_evll2"): Vector2(-732.982, -306.592),
+SubResource("Resource_wa71l"): Vector2(-432.982, -306.592),
+SubResource("Resource_22fj0"): Vector2(-92.9816, -306.592),
+SubResource("Resource_1d7v4"): Vector2(-92.9816, -186.592)
 }
 
 [sub_resource type="Resource" id="Resource_eigmy"]

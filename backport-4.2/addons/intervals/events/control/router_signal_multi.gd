@@ -106,7 +106,10 @@ func get_branch_names() -> Array:
 		var np = get(&"node_path_%s" % idx)
 		var signal_name = get(&"signal_name_%s" % idx)
 		var branch_name := "node undefined-%s" % idx
-		if np:
+		# 4.2 backport: Also check freed-state of _editor_owner.
+		# NOTE: `if _editor_owner` != `if !!_editor_owner` for 4.2 freed-check.
+		#if np:
+		if np && !!_editor_owner:
 			var node: Node = _editor_owner.get_node_or_null(np)
 			if node:
 				if not node.has_signal(signal_name) and not node.has_user_signal(signal_name):

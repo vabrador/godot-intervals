@@ -135,59 +135,12 @@ script = ExtResource("6_qb3jy")
 node_path = NodePath("Background/RichTextLabel")
 signal_name = &"done"
 
-[sub_resource type="Resource" id="Resource_sb31q"]
-script = ExtResource("7_iop28")
-signal_count = 4
-node_paths = Array[NodePath]([NodePath("Background/ColorRoot/Mover/HBoxContainer/RedButton"), NodePath("Background/ColorRoot/Mover/HBoxContainer/GreenButton"), NodePath("Background/ColorRoot/Mover/HBoxContainer/BlueButton"), NodePath("Background/ColorRoot/Mover/HBoxContainer/PinkButton")])
-signal_names = Array[StringName]([&"pressed", &"pressed", &"pressed", &"pressed"])
-node_path_1 = NodePath("Background/ColorRoot/Mover/HBoxContainer/RedButton")
-signal_name_1 = &"pressed"
-node_path_2 = NodePath("Background/ColorRoot/Mover/HBoxContainer/GreenButton")
-signal_name_2 = &"pressed"
-node_path_3 = NodePath("Background/ColorRoot/Mover/HBoxContainer/BlueButton")
-signal_name_3 = &"pressed"
-node_path_4 = NodePath("Background/ColorRoot/Mover/HBoxContainer/PinkButton")
-signal_name_4 = &"pressed"
-
 [sub_resource type="Resource" id="Resource_w1gtk"]
 resource_name = "Set Label Text"
 script = ExtResource("5_y4432")
 node_path = NodePath("Background/RichTextLabel")
 property = "text_string"
 value = "Red? Very well then."
-duration = 0.0
-ease = 2
-trans = 0
-flags = 0
-
-[sub_resource type="Resource" id="Resource_0vduq"]
-resource_name = "Set Label Text"
-script = ExtResource("5_y4432")
-node_path = NodePath("Background/RichTextLabel")
-property = "text_string"
-value = "Green... A wise choice."
-duration = 0.0
-ease = 2
-trans = 0
-flags = 0
-
-[sub_resource type="Resource" id="Resource_nhwb8"]
-resource_name = "Set Label Text"
-script = ExtResource("5_y4432")
-node_path = NodePath("Background/RichTextLabel")
-property = "text_string"
-value = "Blue, a classic."
-duration = 0.0
-ease = 2
-trans = 0
-flags = 0
-
-[sub_resource type="Resource" id="Resource_bipsu"]
-resource_name = "Set Label Text"
-script = ExtResource("5_y4432")
-node_path = NodePath("Background/RichTextLabel")
-property = "text_string"
-value = "Pink! You got it."
 duration = 0.0
 ease = 2
 trans = 0
@@ -204,6 +157,17 @@ ease = 2
 trans = 0
 flags = 0
 
+[sub_resource type="Resource" id="Resource_0vduq"]
+resource_name = "Set Label Text"
+script = ExtResource("5_y4432")
+node_path = NodePath("Background/RichTextLabel")
+property = "text_string"
+value = "Green... A wise choice."
+duration = 0.0
+ease = 2
+trans = 0
+flags = 0
+
 [sub_resource type="Resource" id="Resource_jb74d"]
 resource_name = "Update Background"
 script = ExtResource("5_y4432")
@@ -215,6 +179,17 @@ ease = 2
 trans = 0
 flags = 0
 
+[sub_resource type="Resource" id="Resource_nhwb8"]
+resource_name = "Set Label Text"
+script = ExtResource("5_y4432")
+node_path = NodePath("Background/RichTextLabel")
+property = "text_string"
+value = "Blue, a classic."
+duration = 0.0
+ease = 2
+trans = 0
+flags = 0
+
 [sub_resource type="Resource" id="Resource_nh8lh"]
 resource_name = "Update Background"
 script = ExtResource("5_y4432")
@@ -222,6 +197,17 @@ node_path = NodePath("Background")
 property = "self_modulate"
 value = Color(0.368627, 0.443137, 1, 1)
 duration = 1.0
+ease = 2
+trans = 0
+flags = 0
+
+[sub_resource type="Resource" id="Resource_bipsu"]
+resource_name = "Set Label Text"
+script = ExtResource("5_y4432")
+node_path = NodePath("Background/RichTextLabel")
+property = "text_string"
+value = "Pink! You got it."
+duration = 0.0
 ease = 2
 trans = 0
 flags = 0
@@ -324,6 +310,20 @@ ease = 2
 trans = 0
 flags = 0
 
+[sub_resource type="Resource" id="Resource_sb31q"]
+script = ExtResource("7_iop28")
+signal_count = 4
+node_paths = Array[NodePath]([NodePath("Background/ColorRoot/Mover/HBoxContainer/RedButton"), NodePath("Background/ColorRoot/Mover/HBoxContainer/GreenButton"), NodePath("Background/ColorRoot/Mover/HBoxContainer/BlueButton"), NodePath("Background/ColorRoot/Mover/HBoxContainer/PinkButton")])
+signal_names = Array[StringName]([&"pressed", &"pressed", &"pressed", &"pressed"])
+node_path_1 = NodePath("Background/ColorRoot/Mover/HBoxContainer/RedButton")
+signal_name_1 = &"pressed"
+node_path_2 = NodePath("Background/ColorRoot/Mover/HBoxContainer/GreenButton")
+signal_name_2 = &"pressed"
+node_path_3 = NodePath("Background/ColorRoot/Mover/HBoxContainer/BlueButton")
+signal_name_3 = &"pressed"
+node_path_4 = NodePath("Background/ColorRoot/Mover/HBoxContainer/PinkButton")
+signal_name_4 = &"pressed"
+
 [sub_resource type="Resource" id="Resource_5hj2a"]
 resource_name = "Mover Onscreen"
 script = ExtResource("5_y4432")
@@ -379,35 +379,35 @@ flags = 0
 [sub_resource type="Resource" id="Resource_jd5fw"]
 script = ExtResource("6_a61yc")
 resources = [SubResource("Resource_mbvoj"), SubResource("Resource_pw2je"), SubResource("Resource_7cou8"), SubResource("Resource_blbnj"), SubResource("Resource_gges4"), SubResource("Resource_sb31q"), SubResource("Resource_5hj2a"), SubResource("Resource_4qlx6"), SubResource("Resource_w1gtk"), SubResource("Resource_0vduq"), SubResource("Resource_nhwb8"), SubResource("Resource_bipsu"), SubResource("Resource_wcju0"), SubResource("Resource_jb74d"), SubResource("Resource_nh8lh"), SubResource("Resource_h3icq"), SubResource("Resource_242b0"), SubResource("Resource_lm4pe"), SubResource("Resource_sf3xn"), SubResource("Resource_5xm7m"), SubResource("Resource_yyx4v"), SubResource("Resource_vafpw"), SubResource("Resource_maifo"), SubResource("Resource_foum4"), SubResource("Resource_jbxq2"), SubResource("Resource_ngaoj"), SubResource("Resource_882jv")]
-connections = [[SubResource("Resource_mbvoj"), 0, SubResource("Resource_7cou8"), 0], [SubResource("Resource_sb31q"), 1, SubResource("Resource_w1gtk"), 0], [SubResource("Resource_sb31q"), 2, SubResource("Resource_0vduq"), 0], [SubResource("Resource_sb31q"), 3, SubResource("Resource_nhwb8"), 0], [SubResource("Resource_sb31q"), 4, SubResource("Resource_bipsu"), 0], [SubResource("Resource_w1gtk"), 0, SubResource("Resource_wcju0"), 0], [SubResource("Resource_0vduq"), 0, SubResource("Resource_jb74d"), 0], [SubResource("Resource_nhwb8"), 0, SubResource("Resource_nh8lh"), 0], [SubResource("Resource_bipsu"), 0, SubResource("Resource_h3icq"), 0], [SubResource("Resource_w1gtk"), 0, SubResource("Resource_242b0"), 0], [SubResource("Resource_0vduq"), 0, SubResource("Resource_242b0"), 0], [SubResource("Resource_nhwb8"), 0, SubResource("Resource_242b0"), 0], [SubResource("Resource_bipsu"), 0, SubResource("Resource_242b0"), 0], [SubResource("Resource_242b0"), 0, SubResource("Resource_lm4pe"), 0], [SubResource("Resource_242b0"), 0, SubResource("Resource_sf3xn"), 0], [SubResource("Resource_242b0"), 0, SubResource("Resource_5xm7m"), 0], [SubResource("Resource_242b0"), 0, SubResource("Resource_yyx4v"), 0], [SubResource("Resource_blbnj"), 0, SubResource("Resource_maifo"), 0], [SubResource("Resource_blbnj"), 0, SubResource("Resource_gges4"), 0], [SubResource("Resource_7cou8"), 0, SubResource("Resource_foum4"), 0], [SubResource("Resource_7cou8"), 0, SubResource("Resource_blbnj"), 0], [SubResource("Resource_gges4"), 0, SubResource("Resource_jbxq2"), 0], [SubResource("Resource_jbxq2"), 0, SubResource("Resource_sb31q"), 0], [SubResource("Resource_jbxq2"), 0, SubResource("Resource_5hj2a"), 0], [SubResource("Resource_jbxq2"), 0, SubResource("Resource_4qlx6"), 0], [SubResource("Resource_sf3xn"), 0, SubResource("Resource_vafpw"), 0], [SubResource("Resource_sf3xn"), 0, SubResource("Resource_ngaoj"), 0], [SubResource("Resource_ngaoj"), 0, SubResource("Resource_882jv"), 0]]
+connections = [[SubResource("Resource_mbvoj"), 0, SubResource("Resource_7cou8"), 0], [SubResource("Resource_w1gtk"), 0, SubResource("Resource_wcju0"), 0], [SubResource("Resource_0vduq"), 0, SubResource("Resource_jb74d"), 0], [SubResource("Resource_nhwb8"), 0, SubResource("Resource_nh8lh"), 0], [SubResource("Resource_bipsu"), 0, SubResource("Resource_h3icq"), 0], [SubResource("Resource_w1gtk"), 0, SubResource("Resource_242b0"), 0], [SubResource("Resource_0vduq"), 0, SubResource("Resource_242b0"), 0], [SubResource("Resource_nhwb8"), 0, SubResource("Resource_242b0"), 0], [SubResource("Resource_bipsu"), 0, SubResource("Resource_242b0"), 0], [SubResource("Resource_242b0"), 0, SubResource("Resource_lm4pe"), 0], [SubResource("Resource_242b0"), 0, SubResource("Resource_sf3xn"), 0], [SubResource("Resource_242b0"), 0, SubResource("Resource_5xm7m"), 0], [SubResource("Resource_242b0"), 0, SubResource("Resource_yyx4v"), 0], [SubResource("Resource_blbnj"), 0, SubResource("Resource_maifo"), 0], [SubResource("Resource_blbnj"), 0, SubResource("Resource_gges4"), 0], [SubResource("Resource_7cou8"), 0, SubResource("Resource_foum4"), 0], [SubResource("Resource_7cou8"), 0, SubResource("Resource_blbnj"), 0], [SubResource("Resource_gges4"), 0, SubResource("Resource_jbxq2"), 0], [SubResource("Resource_jbxq2"), 0, SubResource("Resource_sb31q"), 0], [SubResource("Resource_jbxq2"), 0, SubResource("Resource_5hj2a"), 0], [SubResource("Resource_jbxq2"), 0, SubResource("Resource_4qlx6"), 0], [SubResource("Resource_sf3xn"), 0, SubResource("Resource_vafpw"), 0], [SubResource("Resource_sf3xn"), 0, SubResource("Resource_ngaoj"), 0], [SubResource("Resource_ngaoj"), 0, SubResource("Resource_882jv"), 0], [SubResource("Resource_sb31q"), 1, SubResource("Resource_w1gtk"), 0], [SubResource("Resource_sb31q"), 2, SubResource("Resource_0vduq"), 0], [SubResource("Resource_sb31q"), 3, SubResource("Resource_nhwb8"), 0], [SubResource("Resource_sb31q"), 4, SubResource("Resource_bipsu"), 0]]
 positions = {
-SubResource("Resource_882jv"): Vector2(568.805, 7.53043),
-SubResource("Resource_ngaoj"): Vector2(288.805, 7.53043),
-SubResource("Resource_jbxq2"): Vector2(-1025.81, -235.266),
-SubResource("Resource_foum4"): Vector2(-1605.81, -235.266),
-SubResource("Resource_maifo"): Vector2(-1285.81, -235.266),
-SubResource("Resource_vafpw"): Vector2(288.805, -72.4696),
-SubResource("Resource_yyx4v"): Vector2(28.8054, 167.53),
-SubResource("Resource_5xm7m"): Vector2(28.8054, 67.5304),
-SubResource("Resource_sf3xn"): Vector2(28.8054, 7.53043),
-SubResource("Resource_lm4pe"): Vector2(28.8054, -72.4696),
-SubResource("Resource_242b0"): Vector2(-251.195, 7.53043),
-SubResource("Resource_h3icq"): Vector2(-251.195, -92.4696),
-SubResource("Resource_nh8lh"): Vector2(-251.195, -172.47),
-SubResource("Resource_jb74d"): Vector2(-251.195, -272.47),
-SubResource("Resource_wcju0"): Vector2(-251.195, -372.47),
-SubResource("Resource_bipsu"): Vector2(-485.806, -115.266),
-SubResource("Resource_nhwb8"): Vector2(-485.806, -195.266),
-SubResource("Resource_0vduq"): Vector2(-485.806, -275.266),
-SubResource("Resource_w1gtk"): Vector2(-485.806, -355.266),
-SubResource("Resource_4qlx6"): Vector2(-765.806, -55.2659),
-SubResource("Resource_5hj2a"): Vector2(-765.806, -175.266),
-SubResource("Resource_sb31q"): Vector2(-765.806, -355.266),
-SubResource("Resource_gges4"): Vector2(-1285.81, -155.266),
-SubResource("Resource_blbnj"): Vector2(-1605.81, -155.266),
-SubResource("Resource_7cou8"): Vector2(-1885.81, -155.266),
-SubResource("Resource_pw2je"): Vector2(-1885.81, -335.266),
-SubResource("Resource_mbvoj"): Vector2(-1885.81, -235.266)
+SubResource("Resource_mbvoj"): Vector2(-2838.57, -407.687),
+SubResource("Resource_pw2je"): Vector2(-2838.57, -507.687),
+SubResource("Resource_7cou8"): Vector2(-2838.57, -327.687),
+SubResource("Resource_blbnj"): Vector2(-2558.57, -327.687),
+SubResource("Resource_gges4"): Vector2(-2238.57, -327.687),
+SubResource("Resource_sb31q"): Vector2(-1718.57, -527.687),
+SubResource("Resource_5hj2a"): Vector2(-1718.57, -347.687),
+SubResource("Resource_4qlx6"): Vector2(-1718.57, -227.687),
+SubResource("Resource_w1gtk"): Vector2(-1438.57, -527.687),
+SubResource("Resource_0vduq"): Vector2(-1438.57, -447.687),
+SubResource("Resource_nhwb8"): Vector2(-1438.57, -367.687),
+SubResource("Resource_bipsu"): Vector2(-1438.57, -287.687),
+SubResource("Resource_wcju0"): Vector2(-1218.57, -547.687),
+SubResource("Resource_jb74d"): Vector2(-1218.57, -447.687),
+SubResource("Resource_nh8lh"): Vector2(-1218.57, -347.687),
+SubResource("Resource_h3icq"): Vector2(-1218.57, -267.687),
+SubResource("Resource_242b0"): Vector2(-1218.57, -167.687),
+SubResource("Resource_lm4pe"): Vector2(-938.57, -247.687),
+SubResource("Resource_sf3xn"): Vector2(-938.57, -167.687),
+SubResource("Resource_5xm7m"): Vector2(-938.57, -107.687),
+SubResource("Resource_yyx4v"): Vector2(-938.57, -7.68661),
+SubResource("Resource_vafpw"): Vector2(-678.57, -247.687),
+SubResource("Resource_maifo"): Vector2(-2238.57, -407.687),
+SubResource("Resource_foum4"): Vector2(-2558.57, -407.687),
+SubResource("Resource_jbxq2"): Vector2(-1978.57, -407.687),
+SubResource("Resource_ngaoj"): Vector2(-678.57, -167.687),
+SubResource("Resource_882jv"): Vector2(-398.57, -167.687)
 }
 
 [sub_resource type="Resource" id="Resource_8kwol"]

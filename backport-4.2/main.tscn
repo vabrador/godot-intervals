@@ -1,4 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bf1qw6i0w0r8s"]
+[gd_scene load_steps=4 format=3 uid="uid://bf1qw6i0w0r8s"]
+
+[ext_resource type="PackedScene" uid="uid://dc5pepbb63mua" path="res://demos/demo_dialog.tscn" id="1_45eyb"]
+[ext_resource type="PackedScene" uid="uid://dmx22jq87iscw" path="res://demos/demo_colors.tscn" id="2_oq5l2"]
 
 [sub_resource type="GDScript" id="GDScript_vwkc0"]
 resource_name = "start_demo"
@@ -48,8 +51,10 @@ text = "Select a Demo"
 layout_mode = 2
 text = "Dialogue"
 script = SubResource("GDScript_vwkc0")
+demo = ExtResource("1_45eyb")
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Colors (NYI)"
 script = SubResource("GDScript_vwkc0")
+demo = ExtResource("2_oq5l2")
