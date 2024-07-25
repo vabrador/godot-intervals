@@ -21,7 +21,7 @@ for 1.0:
 
 | [Main addon](https://github.com/dog-on-moon/godot-intervals) SHA / tag | Backport-4.2 SHA / tag | Backport Godot Version |
 |----------|----------|----------|
-| e937c890 `1.0` | 5cf90d6b & tag: `backport-1.0` | v4.2.2.stable.official [15073afe3] |
+| e937c890 `1.0` | 5cf90d6b & tag: `backport-v1.0` | v4.2.2.stable.official [15073afe3] |
 | 7054823c | 12efa8a5 | v4.2.2.stable.official [15073afe3] |
 
 # Godot Intervals
