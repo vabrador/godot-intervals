@@ -25,9 +25,11 @@ enum Operation {
 			values[x - 1] = 0
 		notify_property_list_changed()
 
-@export_storage var state_names: Array[StringName] = [&""]
-@export_storage var operations: Array[Operation] = [Operation.IS_SET]
-@export_storage var values: Array[int] = [0]
+# BACKPORT_TODO: Hide via _validate_property if possible
+# 4.2 backport: @export_storage not defined, use @export instead.
+@export var state_names: Array[StringName] = [&""]
+@export var operations: Array[Operation] = [Operation.IS_SET]
+@export var values: Array[int] = [0]
 
 var old_ops: Array[Operation] = []
 
