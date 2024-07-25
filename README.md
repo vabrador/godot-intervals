@@ -112,6 +112,6 @@ The Godot project also comes with a couple of demos.
 
 ## Installation
 
-This repository contains the plugin for v4.3. Copy the contents of the `addons` folder into the `addons` folder in your own Godot project. Both `intervals` and `graphedit2` are required. Be sure to enable both plugins from Project Settings.
+See the [original repository](https://github.com/dog-on-moon/godot-intervals) for Godot 4.3.
 
-For v4.2.2 support, please install the repository from [vabrador's fork.](https://github.com/vabrador/godot-intervals/tree/backport-4.2)
+For installation in Godot 4.2, copy the contents of the `addons` into the `addons` folder in your own Godot project.
