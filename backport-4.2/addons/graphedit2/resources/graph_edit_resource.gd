@@ -90,8 +90,7 @@ func get_resource_inputs(resource) -> Dictionary:
 			GraphEditResource._backport_get_or_add(inputs, c[3], []).append(c[0])
 	return inputs
 
-## Quick, non-optimal backport of dict.get_or_add() in Godot 4.3.
-## Implemented in Godot 4.2.
+## Basic backport of Godot 4.3's dict.get_or_add() for Godot 4.2.
 static func _backport_get_or_add(dict: Dictionary, key: Variant, else_add: Variant) -> Variant:
 	if !(key in dict):
 		dict[key] = else_add

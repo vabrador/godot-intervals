@@ -15,11 +15,12 @@ class_name RouterSignalMulti
 # 4.2 backport: @export instead of @export_storage, and untype the Arrays
 # TODO: Can recreate export_storage by using _validate_property or
 # _get_property_list I think?
-#@export_storage var node_paths: Array[NodePath] = []
-@export var node_paths: Array[NodePath] = []
-#@export_storage var signal_names: Array[StringName] = []
-@export var signal_names: Array[StringName] = []
+#@export_storage var node_paths: Array[NodePath] = [^"", ^""]
+@export var node_paths: Array[NodePath] = [^"", ^""]
+#@export_storage var signal_names: Array[StringName] = [&"", &""]
+@export var signal_names: Array[StringName] = [&"", &""]
 
+# 4.2 backport: Ensure storage arrays are initialized before access.
 var _initialized_signal_count := false
 
 var _editor_owner: Node
@@ -105,7 +106,10 @@ func get_branch_names() -> Array:
 		var np = get(&"node_path_%s" % idx)
 		var signal_name = get(&"signal_name_%s" % idx)
 		var branch_name := "node undefined-%s" % idx
-		if np:
+		# 4.2 backport: Also check freed-state of _editor_owner.
+		# NOTE: `if _editor_owner` != `if !!_editor_owner` for 4.2 freed-check.
+		#if np:
+		if np && !!_editor_owner:
 			var node: Node = _editor_owner.get_node_or_null(np)
 			if node:
 				if not node.has_signal(signal_name) and not node.has_user_signal(signal_name):

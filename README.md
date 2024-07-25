@@ -25,12 +25,12 @@ being worked on (hopefully to be finished soon).
 
 # Godot Intervals
 
-Intervals is a lightweight animation plugin for Godot 4.3 designed to supplement both Tweens and AnimationPlayer by providing powerful, dynamic alternatives.
+Intervals is an animation plugin for Godot 4.2.2+ designed to supplement both Tweens and AnimationPlayer by providing powerful, dynamic alternatives.
 This plugin is created based on what I felt was lacking from Godot in regards to efficient animation development, and I hope it will serve your purposes too.
 
 The plugin features two separate, powerful libraries for animations: **Intervals** and **Events**.
 
-## Intervals
+## ⏳ Intervals - developer-friendly Tweens
 
 Intervals are an object representation of a Tween action. They provide a more expressive syntax for Tweens that can be used to more easily develop, arrange, and comprehend complex Tweens via GDScript.
 Calling `Interval.as_tween(self)` compiles down any interval into its equivalent Tween.
@@ -72,38 +72,45 @@ func start():
 		),
 		
 		# Set can continue flag.
-		Func.new(func (): can_continue = true),
+		SetProperty.new(self, &"can_continue", true),
 	]).as_tween(self)
 ```
 
-The complete list of built-in Intervals are listed below (note that it is easy to extend the base Interval and create your own):
+The complete list of built-in intervals are listed below (note that it is easy to extend the base Interval and create your own):
 1. **Func** - Performs a function call. Equivalent to `tween.tween_callback(callable)`.
 2. **LerpFunc** - Calls a method with a singular argument, lerping between two values. Equivalent to `tween.tween_method(...)`.
 3. **LerpProperty** - Lerps a property between two values on a given object. Equivalent to `tween.tween_property(...)`.
-4. **Wait** - Waits a certain amount of time. Equivalent to `tween.tween_interval(time)`.
-5. **Connect** - Connects a method to a signal.
-6. **Sequence** - Performs all of its sub-tweens in order.
-7. **Parallel** - Performs all of its sub-tweens simultaneously. *NOTE: A bug prevents us from nesting Sequences or Parallels inside other Parallels :(*
-8. **SequenceRandom** - Performs all of its sub-tweens in a random order.
+4. **SetProperty** - Sets a property on a given object.
+5. **Wait** - Waits a certain amount of time. Equivalent to `tween.tween_interval(time)`.
+6. **Connect** - Connects a method to a signal.
+7. **Sequence** - Performs all of its sub-intervals in order.
+8. **Parallel** - Performs all of its sub-intervals simultaneously.
+9. **SequenceRandom** - Performs all of its sub-intervals in a random order.
 
-## Events
+## ⏹️ Events - macroscopic building blocks
 
-Events are an Interval resource with playback logic for dynamic cutscenes. They can be used to describe and build clusters of timed actions together. These actions can be blocking, and can be use to build complex, dynamic cutscenes.
-While an AnimationPlayer is ideal for creating small, previewable animations, an EventPlayer is ideal for dynamic, branching cutscenes.
+Compared to other visual scripting solutions, Events are macroscopic building blocks, allowing you to orchestrate code that you already know works. Where an AnimationPlayer is ideal for creating small, previewable animations, an EventPlayer is ideal for dynamic, branching cutscenes.
 
-Several Event flavors are provided out of the box, but you can extend Event directly to add any kind of complex action for your project.
-This pattern allows developers to use Events as the basis for a custom dialogue system, a visual novel engine, or something generally useful for creating dynamic cutscenes in your projects.
+Events are a Resource which represent a blocking function call. They can be used to describe and build clusters of timed actions together, with routing logic which supports complex, dynamic cutscenes.
 
-Events are contained within a MultiEvent, which can be created by placing an EventPlayer node and adding a new MultiEvent resource. The plugin comes built-in with a MultiEvent editor, the main interface for orchestrating Events together. 
+Several Event flavors are provided out of the box, but you can extend Event directly to add any kind of complex action for your project. This pattern allows developers to use Events as the basis for a custom dialogue system, a visual novel engine, or (quite literally) anything that demands dynamic scripting.
 
 ![screen-shot](https://github.com/fauxhaus/godot-intervals/blob/main/readme/pic01.png)
 
 ## Documentation
 
-Figure it out yourself! That's part of the fun of Intervals! 💗💐🌸 (Kidding, I'll get to this later...)
+For more information, check out my documentation here:
+- [Intervals](https://github.com/dog-on-moon/godot-intervals/tree/main/docs/intervals.md) - developer-friendly tweens
+- [Events](https://github.com/dog-on-moon/godot-intervals/tree/main/docs/events.md) - macroscopic building blocks
+- [List of Events](https://github.com/dog-on-moon/godot-intervals/tree/main/docs/event_list.md) - all default Events
+- [EventPlayer](https://github.com/dog-on-moon/godot-intervals/tree/main/docs/event_player.md) - the node which plays Events
+- [Event Editor](https://github.com/dog-on-moon/godot-intervals/tree/main/docs/event_editor.md) - the main interface for editing events
+- [EventPlayer](https://github.com/dog-on-moon/godot-intervals/tree/main/docs/graph_edit_2.md) - some information on the supplementary addon
 
-The repository does come with a couple of demos.
+The Godot project also comes with a couple of demos.
 
 ## Installation
 
-Copy the contents of the `addons` folder into the `addons` folder in your own Godot project. Both `intervals` and `graphedit2` are required. Be sure to enable both plugins from Project Settings.
+This repository contains the plugin for v4.3. Copy the contents of the `addons` folder into the `addons` folder in your own Godot project. Both `intervals` and `graphedit2` are required. Be sure to enable both plugins from Project Settings.
+
+For v4.2.2 support, please install the repository from [vabrador's fork.](https://github.com/vabrador/godot-intervals/tree/backport-4.2)

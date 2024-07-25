@@ -16,6 +16,7 @@ class_name PropertyEvent
 		if _node_button and is_instance_valid(_node_button):
 			_node_button.visible = _object_exists()
 
+# 4.2 backport: @export_storage doesn't exist in 4.2, but _validate_property
 # handles marking it for serialization, so no annotation is needed.
 #@export_storage var value: Variant
 var value: Variant
@@ -146,6 +147,11 @@ func _validate_property(p: Dictionary):
 	if not node_property:
 		return
 	
+	# 4.2 backport: Ensure "initial_value" is always serialized (even if null)
+	# to match 'main' behavior.
+	if p.name == "initial_value" && not p.usage & PROPERTY_USAGE_STORAGE:
+		p.usage += PROPERTY_USAGE_STORAGE
+	
 	## Now do logic.
 	if p.name == "value":
 		p.type = typeof(node[property])
@@ -168,7 +174,7 @@ func _validate_property(p: Dictionary):
 					p.usage = node_property.usage
 					# 4.2 backport: Ensure initial_value is serialized to match
 					# its @export_storage annotation in 4.3.
-					if not (p.usage & PROPERTY_USAGE_STORAGE):
+					if not p.usage & PROPERTY_USAGE_STORAGE:
 						p.usage += PROPERTY_USAGE_STORAGE
 			"ease":
 				p.usage += PROPERTY_USAGE_EDITOR
