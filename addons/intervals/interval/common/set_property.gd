@@ -1,0 +1,20 @@
+@icon("res://addons/intervals/icons/interval.png")
+extends Interval
+class_name SetProperty
+## An Interval property setter, instantly setting an object's property.
+
+# BACKPORT_TODO: copied-over new file
+
+var object: Object
+var property: StringName
+var value: Variant
+
+func _init(p_object: Object = null,
+		p_property: StringName = &"",
+		p_value: Variant = null,) -> void:
+	object = p_object
+	property = p_property
+	value = p_value
+
+func _onto_tween(tween: Tween):
+	tween.tween_callback(func (): object.set(property, value))
