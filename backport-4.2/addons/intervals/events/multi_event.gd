@@ -4,7 +4,9 @@ extends Event
 class_name MultiEvent
 ## A MultiEvent contains multiple events and can be used for advanced, dynamic cutscenes.
 
-# BACKPORT_TODO: Implement _validate_property to make these hidden if possible.
+# 4.2 backport: @export_storage does not exist, _validate_property instead.
+# Removes @export* entirely, props are manually marked PROPERTY_USAGE_STORAGE.
+
 ## The editor data for this MultiEvent.
 var editor_data: Resource = null
 #@export_storage var editor_data: Resource = null

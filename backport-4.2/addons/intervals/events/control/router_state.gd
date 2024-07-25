@@ -25,11 +25,21 @@ enum Operation {
 			values[x - 1] = 0
 		notify_property_list_changed()
 
-# BACKPORT_TODO: Hide via _validate_property if possible
-# 4.2 backport: @export_storage not defined, use @export instead.
-@export var state_names: Array[StringName] = [&""]
-@export var operations: Array[Operation] = [Operation.IS_SET]
-@export var values: Array[int] = [0]
+# 4.2 backport: @export_storage does not exist, _validate_property instead.
+# Removes @export* entirely, props are manually marked PROPERTY_USAGE_STORAGE.
+#@export_storage var state_names: Array[StringName] = [&""]
+#@export_storage var operations: Array[Operation] = [Operation.IS_SET]
+#@export_storage var values: Array[int] = [0]
+var state_names: Array[StringName] = [&""]
+var operations: Array[Operation] = [Operation.IS_SET]
+var values: Array[int] = [0]
+
+# 4.2 backport: Mark editor_data, cycles, debug for serialization without
+# @export, to recreate the functionality of @export_storage.
+func _validate_property(p: Dictionary):
+	var export_storage_props = [ "state_names", "operations", "values" ]
+	if p.name in export_storage_props && not (p.usage & PROPERTY_USAGE_STORAGE):
+		p.usage += PROPERTY_USAGE_STORAGE
 
 var old_ops: Array[Operation] = []
 
