@@ -55,6 +55,6 @@ demo = ExtResource("1_45eyb")
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Colors (NYI)"
+text = "Colors"
 script = SubResource("GDScript_vwkc0")
 demo = ExtResource("2_oq5l2")
