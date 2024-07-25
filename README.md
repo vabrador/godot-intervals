@@ -8,20 +8,21 @@ contains another Godot project, built and maintained in Godot 4.2. The inner 4.2
 rebuilt from the originals for Godot 4.2.
 
 The `addons` folder in the top-level 4.3 project is identical to the `addons` folder in the inner 4.2 project.
-This project's backported version of the addons should work in Godot 4.2 as well as Godot 4.3, which is
-useful if you are upgrading your project between Godot versions.
+This project's backported version of the addons work in Godot 4.2 as well as Godot 4.3.
 
 If you update your project to Godot 4.3, I would strongly suggest switching back to the
-[main repository version](https://github.com/dog-on-moon/godot-intervals), but please note:
-- ⚠️Serialization compatibitility⚠️ between this fork and the main addon **HAS NOT YET BEEN TESTED** and is still
-being worked on (hopefully to be finished soon).
-    - They are likely to be very compatible, if not fully compatible, but this is not yet tested.
+[main repository version](https://github.com/dog-on-moon/godot-intervals). This upgrade path has been tested
+for 1.0:
+1. Update your 4.2 project by opening it in Godot 4.3 first. (Don't upgrade your addons yet.)
+2. Upgrade the Godot Intervals addons by replacing this repository's `addons` with the main version's.
+3. Confirm via git that no data-loss occurs: `1.0` and `backport-1.0` should have identical serialization.
 
 ## Sync status
 
-| [Main addon](https://github.com/dog-on-moon/godot-intervals) SHA | Backport-4.2 SHA | Backport Godot Version |
+| [Main addon](https://github.com/dog-on-moon/godot-intervals) SHA / tag | Backport-4.2 SHA / tag | Backport Godot Version |
 |----------|----------|----------|
-| 7054823c | 12efa8a5 | v4.2.2.stable.official [15073afe3]
+| e937c890 `1.0` | 5cf90d6b & tag: `backport-1.0` | v4.2.2.stable.official [15073afe3] |
+| 7054823c | 12efa8a5 | v4.2.2.stable.official [15073afe3] |
 
 # Godot Intervals
 
