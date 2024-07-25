@@ -129,6 +129,7 @@ duration = 0.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_7cou8"]
 script = ExtResource("6_qb3jy")
@@ -145,6 +146,7 @@ duration = 0.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_wcju0"]
 resource_name = "Update Background"
@@ -156,6 +158,7 @@ duration = 1.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_0vduq"]
 resource_name = "Set Label Text"
@@ -167,6 +170,7 @@ duration = 0.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_jb74d"]
 resource_name = "Update Background"
@@ -178,6 +182,7 @@ duration = 1.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_nhwb8"]
 resource_name = "Set Label Text"
@@ -189,6 +194,7 @@ duration = 0.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_nh8lh"]
 resource_name = "Update Background"
@@ -200,6 +206,7 @@ duration = 1.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_bipsu"]
 resource_name = "Set Label Text"
@@ -211,6 +218,7 @@ duration = 0.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_h3icq"]
 resource_name = "Update Background"
@@ -222,6 +230,7 @@ duration = 1.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_242b0"]
 script = ExtResource("6_qb3jy")
@@ -238,6 +247,7 @@ duration = 0.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_sf3xn"]
 script = ExtResource("6_qb3jy")
@@ -254,6 +264,7 @@ duration = 1.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_yyx4v"]
 resource_name = "Invisible Root"
@@ -265,6 +276,7 @@ duration = 1.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_blbnj"]
 script = ExtResource("6_qb3jy")
@@ -281,6 +293,7 @@ duration = 0.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_gges4"]
 script = ExtResource("6_qb3jy")
@@ -297,6 +310,7 @@ duration = 0.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_jbxq2"]
 resource_name = "Set Label Text"
@@ -309,6 +323,7 @@ duration = 0.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_sb31q"]
 script = ExtResource("7_iop28")
@@ -334,6 +349,7 @@ duration = 1.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_4qlx6"]
 resource_name = "Visible Root"
@@ -345,6 +361,7 @@ duration = 1.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_vafpw"]
 resource_name = "Set Label Text"
@@ -356,6 +373,7 @@ duration = 0.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_ngaoj"]
 script = ExtResource("6_qb3jy")
@@ -375,6 +393,7 @@ duration = 0.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_jd5fw"]
 script = ExtResource("6_a61yc")

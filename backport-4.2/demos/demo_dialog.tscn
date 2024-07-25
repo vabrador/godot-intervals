@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dc5pepbb63mua"]
+[gd_scene load_steps=34 format=3 uid="uid://dc5pepbb63mua"]
 
 [ext_resource type="Script" path="res://addons/intervals/nodes/event_player.gd" id="1_3fl3s"]
 [ext_resource type="Script" path="res://demos/demo.gd" id="1_sxp2p"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://demos/dialog/clear_dialogue_event.gd" id="4_vkagw"]
 [ext_resource type="Script" path="res://addons/intervals/events/multi_event.gd" id="4_xeshj"]
 [ext_resource type="Script" path="res://addons/intervals/events/animate/wait_event.gd" id="5_od75i"]
+[ext_resource type="Script" path="res://addons/intervals/events/meta/end_multi_event.gd" id="7_lp554"]
 
 [sub_resource type="Gradient" id="Gradient_f7fsh"]
 offsets = PackedFloat32Array(0, 0.507, 1)
@@ -47,6 +48,7 @@ duration = 3.0
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_ypwto"]
 script = ExtResource("2_s2wb6")
@@ -73,6 +75,7 @@ duration = 1.5
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_rjeae"]
 script = ExtResource("2_s2wb6")
@@ -92,6 +95,7 @@ duration = 1.5
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_gsl63"]
 script = ExtResource("2_s2wb6")
@@ -111,6 +115,7 @@ duration = 1.5
 ease = 2
 trans = 0
 flags = 0
+initial_value = null
 
 [sub_resource type="Resource" id="Resource_wa71l"]
 script = ExtResource("2_s2wb6")
@@ -123,29 +128,33 @@ duration = 1.0
 [sub_resource type="Resource" id="Resource_1d7v4"]
 script = ExtResource("4_vkagw")
 
+[sub_resource type="Resource" id="Resource_a3kvt"]
+script = ExtResource("7_lp554")
+
 [sub_resource type="Resource" id="Resource_vycqf"]
 script = ExtResource("3_1e3kg")
-resources = [SubResource("Resource_tvy7q"), SubResource("Resource_rqp5m"), SubResource("Resource_gde6u"), SubResource("Resource_1j5vg"), SubResource("Resource_f2csd"), SubResource("Resource_2781i"), SubResource("Resource_ypwto"), SubResource("Resource_s2nlb"), SubResource("Resource_hnygf"), SubResource("Resource_m08nt"), SubResource("Resource_rjeae"), SubResource("Resource_2lhns"), SubResource("Resource_gsl63"), SubResource("Resource_mhbdl"), SubResource("Resource_evll2"), SubResource("Resource_wa71l"), SubResource("Resource_22fj0"), SubResource("Resource_1d7v4")]
-connections = [[SubResource("Resource_rqp5m"), 0, SubResource("Resource_gde6u"), 0], [SubResource("Resource_1j5vg"), 0, SubResource("Resource_f2csd"), 0], [SubResource("Resource_f2csd"), 0, SubResource("Resource_2781i"), 0], [SubResource("Resource_f2csd"), 0, SubResource("Resource_ypwto"), 0], [SubResource("Resource_ypwto"), 0, SubResource("Resource_s2nlb"), 0], [SubResource("Resource_s2nlb"), 0, SubResource("Resource_hnygf"), 0], [SubResource("Resource_hnygf"), 0, SubResource("Resource_m08nt"), 0], [SubResource("Resource_hnygf"), 0, SubResource("Resource_rjeae"), 0], [SubResource("Resource_rjeae"), 0, SubResource("Resource_2lhns"), 0], [SubResource("Resource_2lhns"), 0, SubResource("Resource_tvy7q"), 0], [SubResource("Resource_2lhns"), 0, SubResource("Resource_rqp5m"), 0], [SubResource("Resource_gde6u"), 0, SubResource("Resource_gsl63"), 0], [SubResource("Resource_gsl63"), 0, SubResource("Resource_mhbdl"), 0], [SubResource("Resource_gsl63"), 0, SubResource("Resource_evll2"), 0], [SubResource("Resource_evll2"), 0, SubResource("Resource_wa71l"), 0], [SubResource("Resource_wa71l"), 0, SubResource("Resource_22fj0"), 0], [SubResource("Resource_wa71l"), 0, SubResource("Resource_1d7v4"), 0]]
+resources = [SubResource("Resource_tvy7q"), SubResource("Resource_rqp5m"), SubResource("Resource_gde6u"), SubResource("Resource_1j5vg"), SubResource("Resource_f2csd"), SubResource("Resource_2781i"), SubResource("Resource_ypwto"), SubResource("Resource_s2nlb"), SubResource("Resource_hnygf"), SubResource("Resource_m08nt"), SubResource("Resource_rjeae"), SubResource("Resource_2lhns"), SubResource("Resource_gsl63"), SubResource("Resource_mhbdl"), SubResource("Resource_evll2"), SubResource("Resource_wa71l"), SubResource("Resource_22fj0"), SubResource("Resource_1d7v4"), SubResource("Resource_a3kvt")]
+connections = [[SubResource("Resource_rqp5m"), 0, SubResource("Resource_gde6u"), 0], [SubResource("Resource_1j5vg"), 0, SubResource("Resource_f2csd"), 0], [SubResource("Resource_f2csd"), 0, SubResource("Resource_2781i"), 0], [SubResource("Resource_f2csd"), 0, SubResource("Resource_ypwto"), 0], [SubResource("Resource_ypwto"), 0, SubResource("Resource_s2nlb"), 0], [SubResource("Resource_s2nlb"), 0, SubResource("Resource_hnygf"), 0], [SubResource("Resource_hnygf"), 0, SubResource("Resource_m08nt"), 0], [SubResource("Resource_hnygf"), 0, SubResource("Resource_rjeae"), 0], [SubResource("Resource_rjeae"), 0, SubResource("Resource_2lhns"), 0], [SubResource("Resource_2lhns"), 0, SubResource("Resource_tvy7q"), 0], [SubResource("Resource_2lhns"), 0, SubResource("Resource_rqp5m"), 0], [SubResource("Resource_gde6u"), 0, SubResource("Resource_gsl63"), 0], [SubResource("Resource_gsl63"), 0, SubResource("Resource_mhbdl"), 0], [SubResource("Resource_gsl63"), 0, SubResource("Resource_evll2"), 0], [SubResource("Resource_evll2"), 0, SubResource("Resource_wa71l"), 0], [SubResource("Resource_wa71l"), 0, SubResource("Resource_22fj0"), 0], [SubResource("Resource_wa71l"), 0, SubResource("Resource_1d7v4"), 0], [SubResource("Resource_22fj0"), 0, SubResource("Resource_a3kvt"), 0]]
 positions = {
-SubResource("Resource_tvy7q"): Vector2(-2012.98, -546.592),
-SubResource("Resource_rqp5m"): Vector2(-2012.98, -406.592),
-SubResource("Resource_gde6u"): Vector2(-1712.98, -406.592),
-SubResource("Resource_1j5vg"): Vector2(-4932.98, -906.592),
-SubResource("Resource_f2csd"): Vector2(-4592.98, -906.592),
-SubResource("Resource_2781i"): Vector2(-4052.98, -906.592),
-SubResource("Resource_ypwto"): Vector2(-4052.98, -726.592),
-SubResource("Resource_s2nlb"): Vector2(-3652.98, -726.592),
-SubResource("Resource_hnygf"): Vector2(-3312.98, -726.592),
-SubResource("Resource_m08nt"): Vector2(-2912.98, -726.592),
-SubResource("Resource_rjeae"): Vector2(-2912.98, -546.592),
-SubResource("Resource_2lhns"): Vector2(-2472.98, -546.592),
-SubResource("Resource_gsl63"): Vector2(-1192.98, -406.592),
-SubResource("Resource_mhbdl"): Vector2(-732.982, -406.592),
-SubResource("Resource_evll2"): Vector2(-732.982, -306.592),
-SubResource("Resource_wa71l"): Vector2(-432.982, -306.592),
-SubResource("Resource_22fj0"): Vector2(-92.9816, -306.592),
-SubResource("Resource_1d7v4"): Vector2(-92.9816, -186.592)
+SubResource("Resource_a3kvt"): Vector2(4090.65, 361.466),
+SubResource("Resource_tvy7q"): Vector2(1916.01, 120.327),
+SubResource("Resource_rqp5m"): Vector2(1916.01, 260.327),
+SubResource("Resource_gde6u"): Vector2(2216.01, 260.327),
+SubResource("Resource_1j5vg"): Vector2(-1003.99, -239.673),
+SubResource("Resource_f2csd"): Vector2(-663.991, -239.673),
+SubResource("Resource_2781i"): Vector2(-123.991, -239.673),
+SubResource("Resource_ypwto"): Vector2(-123.991, -59.6733),
+SubResource("Resource_s2nlb"): Vector2(276.009, -59.6733),
+SubResource("Resource_hnygf"): Vector2(616.009, -59.6733),
+SubResource("Resource_m08nt"): Vector2(1016.01, -59.6733),
+SubResource("Resource_rjeae"): Vector2(1016.01, 120.327),
+SubResource("Resource_2lhns"): Vector2(1456.01, 120.327),
+SubResource("Resource_gsl63"): Vector2(2736.01, 260.327),
+SubResource("Resource_mhbdl"): Vector2(3196.01, 260.327),
+SubResource("Resource_evll2"): Vector2(3196.01, 360.327),
+SubResource("Resource_wa71l"): Vector2(3496.01, 360.327),
+SubResource("Resource_22fj0"): Vector2(3836.01, 360.327),
+SubResource("Resource_1d7v4"): Vector2(3836.01, 480.327)
 }
 
 [sub_resource type="Resource" id="Resource_eigmy"]
@@ -155,8 +164,9 @@ editor_data = SubResource("Resource_vycqf")
 cycles = false
 debug = false
 
-[node name="DemoDialog" type="Node"]
+[node name="DemoDialog" type="Node" node_paths=PackedStringArray("event_player")]
 script = ExtResource("1_sxp2p")
+event_player = NodePath("EventPlayer")
 
 [node name="Background" type="TextureRect" parent="."]
 anchors_preset = 15
